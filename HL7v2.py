@@ -16,6 +16,8 @@ msg = parse_hl7_message(message)
 assert isinstance(parse_hl7_message("MSH|^~\&|HL7Soup|Instance1|HL7Soup|Instance2|200808181126|SECURITY|ADT^A01^ADT_A01|MSG00001|P|2.5"), hl7apy.core.Message)
 
 # Printing the message
+st.header("HL7 Message parser")
+st.subheader("Message:")
 for segment in msg.children:
     if isinstance(segment, Segment):
         for attribute in segment.children:
