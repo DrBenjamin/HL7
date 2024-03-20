@@ -17,7 +17,7 @@ assert isinstance(parse_hl7_message("MSH|^~\&|HL7Soup|Instance1|HL7Soup|Instance
 
 # Printing the message
 st.header("HL7 Message parser")
-st.subheader("Message:")
+st.subheader("HL7 Message:")
 for segment in msg.children:
     if isinstance(segment, Segment):
         for attribute in segment.children:
