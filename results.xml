@@ -1,7 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="1" tests="3" time="0.018" timestamp="2024-03-21T09:49:58.642186" hostname="J711QF7F7G"><testcase classname="tests.SimpleTest" name="test_fail" time="0.000"><failure message="AssertionError: 11 != 10">self = &lt;tests.SimpleTest testMethod=test_fail&gt;
-
-    def test_fail(self):
-&gt;       self.assertEqual(11, 7 + 3)
-E       AssertionError: 11 != 10
-
-tests.py:14: AssertionError</failure></testcase><testcase classname="tests.SimpleTest" name="test_pass" time="0.000" /><testcase classname="tests.SimpleTest" name="test_skipped" time="0.000"><skipped type="pytest.skip" message="demonstrating skipping">/Users/benjamin.gross1/Library/CloudStorage/OneDrive-adessoGroup/Dokumente/HealthCare/HL7/v2/tests.py:6: demonstrating skipping</skipped></testcase></testsuite></testsuites>
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="3" time="2.258" timestamp="2024-03-21T11:23:02.647935" hostname="J711QF7F7G"><testcase classname="tests.SimpleTest" name="test_parse_hl7_message" time="0.003" /><testcase classname="tests.SimpleTest" name="test_parse_hl7_message2" time="0.003" /><testcase classname="tests.SimpleTest" name="test_parse_hl7_message3" time="0.002" /></testsuite></testsuites>
