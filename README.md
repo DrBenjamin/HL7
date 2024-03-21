@@ -16,3 +16,7 @@ Open port for Jenkins on Docker for Mac.
 ```bash
 socat TCP-LISTEN:2375,reuseaddr,fork UNIX-CONNECT:/var/run/docker.sock
 ```
+
+The image is *mzagar/jenkins-slave-jdk-maven-git*
+or 
+*bibinwilson/jenkins-slave:latest*
