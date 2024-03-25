@@ -1,0 +1,20 @@
+version: '3'
+name: hl7v2
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: web
+    restart: always
+    ports:
+      - "8501:8501"
+    networks:
+      - network1
+networks:
+  network1:
+    name: streamlite_default
+    driver: bridge
+    external: false
+volumes:
+  web_data: {}
