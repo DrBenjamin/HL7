@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag hl7v2
     - name: Run the Docker container
-      run: docker run --name hl7v2_container hl7v2
+      run: docker run --detach --name hl7v2_container hl7v2
