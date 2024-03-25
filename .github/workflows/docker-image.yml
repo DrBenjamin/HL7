@@ -22,4 +22,5 @@ jobs:
       run: docker run --detach --name hl7v2_container hl7v2
 
   publish:
+  
     needs: build
