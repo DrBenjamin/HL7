@@ -29,4 +29,4 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Run the Docker Container
-      run: docker run --name HL7v2 --detach -p 8501:8501 drbenjamin/hl7v2:main-b74dfe3
+      run: docker run --name HL7v2 --detach -p 8501:8501 drbenjamin/hl7v2:v1
