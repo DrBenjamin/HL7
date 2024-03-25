@@ -12,7 +12,7 @@ jobs:
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
-        os: [ macOS-latest ]
+        os: [ ubuntu-latest]
 
     steps:
     - uses: actions/checkout@v3
@@ -20,7 +20,3 @@ jobs:
       run: docker build . --file Dockerfile --tag hl7v2
     - name: Run the Docker container
       run: docker run --detach --name hl7v2_container hl7v2
-
-  publish:
-  
-    needs: build
