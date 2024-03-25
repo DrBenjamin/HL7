@@ -19,3 +19,10 @@ Build und run docker container:
 socat TCP-LISTEN:2375,reuseaddr,fork UNIX-CONNECT:/var/run/docker.sock
 docker-compose build --no-cache && docker-compose --project-name hl7v2 up -d && docker image prune -fa
 ```
+
+or pull the image from Docker Hub:
+
+```bash
+docker pull drbenjamin/hl7v2:main-b74dfe3
+docker run --name HL7v2 -p 8501:8501 drbenjamin/hl7v2:main-b74dfe3
+```
