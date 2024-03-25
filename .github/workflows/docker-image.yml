@@ -12,11 +12,17 @@ jobs:
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
-        os: [ ubuntu-latest]
+        os: [ ubuntu-latest ]
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag hl7v2
-    - name: Run the Docker container
+    - name: Build and Push Docker Image
+      - uses: mr-smithers-excellent/docker-build-push@v6
+        with:
+          image: drbenjamin/hl7v2
+          registry: docker.io
+          dockerfile: Dockerfile
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+    - name: Run the Docker Container
       run: docker run --detach --name hl7v2_container hl7v2
