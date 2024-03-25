@@ -7,10 +7,12 @@ on:
     branches: [ "main" ]
 
 jobs:
-
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ${{matrix.os}}
+    strstegy:
+      matrix:
+        os: [ macOS-latest ]
 
     steps:
     - uses: actions/checkout@v3
@@ -18,3 +20,4 @@ jobs:
       run: docker build . --file Dockerfile --tag hl7v2
     - name: Run the Docker container
       run: docker run --detach --name hl7v2_container hl7v2
+
