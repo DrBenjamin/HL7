@@ -16,8 +16,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build and Push Docker Image
-        uses: mr-smithers-excellent/docker-build-push@v6
+      name: Check out code
+
+    - uses: mr-smithers-excellent/docker-build-push@v6
+        name: Build and Push Docker Image
         with:
           image: drbenjamin/hl7v2
           registry: docker.io
