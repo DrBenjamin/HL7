@@ -23,6 +23,5 @@ docker-compose build --no-cache && docker-compose --project-name hl7v2 up -d && 
 or pull the image from Docker Hub:
 
 ```bash
-docker pull drbenjamin/hl7v2:main-b74dfe3
-docker run --name HL7v2 --detach -p 8501:8501 drbenjamin/hl7v2:main-b74dfe3
+docker pull drbenjamin/hl7v2:v1 && docker run --name HL7v2 --detach -p 8501:8501 drbenjamin/hl7v2:v1
 ```
