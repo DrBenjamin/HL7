@@ -22,10 +22,11 @@ jobs:
       name: Build and Push Docker Image
       with:
         image: drbenjamin/hl7v2
+        tags: v1 latest
         registry: docker.io
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Run the Docker Container
-      run: docker run --name HL7v2 -p 8501:8501 drbenjamin/hl7v2:main-b74dfe3
+      run: docker run --name HL7v2 --detach -p 8501:8501 drbenjamin/hl7v2:main-b74dfe3

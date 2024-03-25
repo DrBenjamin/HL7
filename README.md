@@ -24,5 +24,5 @@ or pull the image from Docker Hub:
 
 ```bash
 docker pull drbenjamin/hl7v2:main-b74dfe3
-docker run --name HL7v2 -p 8501:8501 drbenjamin/hl7v2:main-b74dfe3
+docker run --name HL7v2 --detach -p 8501:8501 drbenjamin/hl7v2:main-b74dfe3
 ```
