@@ -25,3 +25,11 @@ or pull the image from Docker Hub:
 ```bash
 docker pull drbenjamin/hl7v2:v1 && docker stop HL7v2 && docker rm HL7v2 && docker run --name HL7v2 --detach -p 8501:8501 drbenjamin/hl7v2:v1
 ```
+
+## Ansible
+
+To run the Ansible playbook use the following command:
+
+```bash
+ansible-playbook -i ~/.ansible/inventory.yml ansible_osx.yml --ask-become-pass
+```
