@@ -28,7 +28,13 @@ docker pull drbenjamin/hl7v2:v1 && docker stop HL7v2 && docker rm HL7v2 && docke
 
 ## Automated system setup with Ansible
 
-To run the Ansible playbook on MacOS use the following command:
+Activate the ssh passkey authentication:
+
+```bash
+ssh-add --apple-use-keychain ~/.ssh/<keyfile>
+```
+
+To run the Ansible playbook on MacOS prepare the remote Mac with the following command:
 
 ```bash
 xcode-select --install
