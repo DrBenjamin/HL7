@@ -28,6 +28,7 @@
         - deepl
         - docker
         - dropbox
+        - miniconda
         - visual-studio-code
         - vlc
 
@@ -68,5 +69,6 @@
         - 462054704 # Microsoft Word 
         - 462058435 # Microsoft Excel
         - 462062816 # Microsoft PowerPoint
+        - 985367838 # Microsoft Outlook  
         - 640199958 # Developer
         - 497799835 # XCode
