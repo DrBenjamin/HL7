@@ -1,23 +1,7 @@
 ---
-- hosts: ben-macmini
-  pre_tasks:
-    - name: Ensuring Homebrew Is Installed
-      stat:
-        path: /opt/homebrew/bin/brew
-      register: homebrew_check
-
-    - name: Fail If Homebrew Is Not Installed and install_homebrew_if_missing Is False
-      fail:
-        msg: Homebrew is missing, install from https://brew.sh
-      when:
-        - not homebrew_check.stat.exists
-        - not install_homebrew_if_missing
-
-    - name: Installing Homebrew
-      shell: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-      when:
-        - not homebrew_check.stat.exists
-        - install_homebrew_if_missing
+- hosts: [ben-macmini, ben-macbookpro]
+  vars:
+    install_homebrew_if_missing: true
 
   tasks:
     - name: Make sure homebrew bin is in path
@@ -32,11 +16,8 @@
       community.general.homebrew_tap:
         name: [
           adoptopenjdk/openjdk,
-          fishtown-analytics/dbt,
           heroku/brew,
-          homebrew/cask-versions,
-          thoughtbot/formulae,
-          weaveworks/tap,
+          homebrew/cask-versions
         ]
 
     - name: Install core packages via brew casks
@@ -44,6 +25,9 @@
         name: "{{ item }}"
       ignore_errors: yes
       with_items:
+        - deepl
+        - docker
+        - dropbox
         - visual-studio-code
         - vlc
 
@@ -52,7 +36,21 @@
         name: [
           'autoconf',
           'automake',
-          'mas'
+          'coreutils',
+          'curl',
+          'libtool',
+          'libxslt',
+          'libyaml',
+          'joe',
+          'mas',
+          'openssl' ,
+          'pkg-config',
+          'unzip',
+          'vim',
+          'watchman',
+          'xz',
+          'yarn',
+          'zlib',
         ]
         state: present
         update_homebrew: yes
@@ -60,4 +58,15 @@
     - name: "Install from Mac app store"
       shell: /opt/homebrew/bin/mas install {{ item }}
       with_items:
+        - 1432731683 # Adblock Plus
+        - 302584613 # Kindle   
+        - 310633997 # WhatsApp
+        - 6444050820 # Draw Things
+        - 1035236694 # Commander One
+        - 823766827 # OneDrive
+        - 784801555 # Onenote
+        - 462054704 # Microsoft Word 
+        - 462058435 # Microsoft Excel
+        - 462062816 # Microsoft PowerPoint
+        - 640199958 # Developer
         - 497799835 # XCode
