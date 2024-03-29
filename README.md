@@ -57,5 +57,5 @@ all:
 Finally run the playbook:
 
 ```bash 
-ansible-playbook -i ~/.ansible/inventory.yml ansible_osx.yml --ask-become-pass
+ansible-playbook -i ~/.ansible/inventory.yml ~/.ansible/ansible_osx.yml --ask-become-pass
 ```
