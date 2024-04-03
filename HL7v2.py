@@ -25,3 +25,6 @@ for segment in msg.children:
                 for attribute in group_segment.children:
                     print(attribute, attribute.value)
                     st.write(attribute.value)
+
+#TODO: Add file uploader to upload HL7 messages
+st.upload_file("Upload HL7 message", type=['hl7', 'txt'])
