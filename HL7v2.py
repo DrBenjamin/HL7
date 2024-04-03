@@ -27,4 +27,8 @@ for segment in msg.children:
                     st.write(attribute.value)
 
 #TODO: Add file uploader to upload HL7 messages
-st.upload_file("Upload HL7 message", type=['hl7', 'txt'])
+file = st.upload_file("Upload HL7 message", type=['hl7', 'txt'])
+try:
+  st.write(file.getvalue())
+except Exception as e:
+  print(e)
