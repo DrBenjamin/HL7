@@ -7,7 +7,7 @@ def parse_hl7_message(message):
     return parse_message(message)
 
 # Opening sample document
-with open('sample_message.hl7', 'r') as file:
+with open('sample_message_2.hl7', 'r') as file:
     message = file.read()
 msg = parse_hl7_message(message)
 
@@ -27,7 +27,7 @@ for segment in msg.children:
                     st.write(attribute.value)
 
 #TODO: Add file uploader to upload HL7 messages
-file = st.upload_file("Upload HL7 message", type=['hl7', 'txt'])
+file = st.file_uploader("Upload HL7 message", type=['hl7', 'txt'])
 try:
   st.write(file.getvalue())
 except Exception as e:
