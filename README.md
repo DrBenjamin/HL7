@@ -34,5 +34,5 @@ Pull and run docker container:
 
 ```bash
 # Pull and run the container
-docker pull nextgenhealthcare/connect && docker run --name connect -d -p 8443:8443 nextgenhealthcare/connect
+docker pull nextgenhealthcare/connect && docker run --name connect -d -p 8443:8443 -p 20000:20000 nextgenhealthcare/connect
 ```
