@@ -1,0 +1,113 @@
+[
+  {
+    "MSH_1": "|"
+  },
+  {
+    "MSH_2": "^~\\&"
+  },
+  {
+    "MSH_3": "Labor"
+  },
+  {
+    "MSH_4": "Krankenhaus"
+  },
+  {
+    "MSH_5": "KIS"
+  },
+  {
+    "MSH_6": "Krankenhaus"
+  },
+  {
+    "MSH_7": "20240606123000"
+  },
+  {
+    "MSH_9": "ORU^R01"
+  },
+  {
+    "MSH_10": "12345"
+  },
+  {
+    "MSH_11": "P"
+  },
+  {
+    "MSH_12": "2.3.1"
+  },
+  {
+    "PID_1": "1"
+  },
+  {
+    "PID_3": "123456^^^Krankenhaus^PI"
+  },
+  {
+    "PID_5": "Mustermann^Max^^^Herr"
+  },
+  {
+    "PID_7": "19800101"
+  },
+  {
+    "PID_8": "M"
+  },
+  {
+    "PID_11": "Musterstra\u00dfe 1^^Musterstadt^^12345^DE^^H"
+  },
+  {
+    "PV1": "PV1|1|I|Station1^Zimmer123^Bett1^Krankenhaus|||1234^Arzt^Heinz^^^Dr.med.|4567^Arzt^Schmidt^^^Dr.med.|Surgeon^Schmidt^Hans^^Dr.|Medizinische Klinik|||N|||||12345^Krankenhaus|||C"
+  },
+  {
+    "ORC_1": "RE"
+  },
+  {
+    "ORC_2": "12345"
+  },
+  {
+    "ORC_3": "54321"
+  },
+  {
+    "ORC_5": "CM"
+  },
+  {
+    "ORC_9": "20240606123000"
+  },
+  {
+    "ORC_12": "1234^Arzt^Heinz^^^Dr.med."
+  },
+  {
+    "OBR_1": "1"
+  },
+  {
+    "OBR_2": "12345"
+  },
+  {
+    "OBR_3": "54321"
+  },
+  {
+    "OBR_4": "88304^Pathologische Untersuchung^L"
+  },
+  {
+    "OBR_5": "20240606123000"
+  },
+  {
+    "OBR_6": "20240606123000"
+  },
+  {
+    "OBR_7": "20240606123000"
+  },
+  {
+    "OBR_15": "1234^Arzt^Heinz^^^Dr.med."
+  },
+  {
+    "OBR_16": "4567^Arzt^Schmidt^^^Dr.med."
+  },
+  {
+    "OBR_17": "20240606123000"
+  },
+  {
+    "OBR_20": "P"
+  },
+  {
+    "OBR_27": "20240606123000"
+  },
+  {
+    "OBX": "OBX|1|TX|88304^Pathologische Untersuchung^L||Pathologischer Bericht Text||||||F"
+  }
+]
